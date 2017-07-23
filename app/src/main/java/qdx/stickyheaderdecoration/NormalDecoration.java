@@ -245,15 +245,15 @@ public abstract class NormalDecoration extends RecyclerView.ItemDecoration {
             imageView.setImageDrawable(getImg(url));
 
         } else {
-            Glide.with(mRecyclerView.getContext()).load(url).into(new SimpleTarget<Drawable>() {
-                @Override
-                public void onResourceReady(Drawable resource, Transition<? super Drawable> transition) {
-                    Log.i("qdx", "Glide回调" + pos);
-                    headViewMap.remove(pos);//删除，重新更新
-                    imgDrawableMap.put(url, resource);
-                    mRecyclerView.postInvalidate();
-                }
-            });
+//            Glide.with(mRecyclerView.getContext()).load(url).into(new SimpleTarget<Drawable>() {
+//                @Override
+//                public void onResourceReady(Drawable resource, Transition<? super Drawable> transition) {
+//                    Log.i("qdx", "Glide回调" + pos);
+//                    headViewMap.remove(pos);//删除，重新更新
+//                    imgDrawableMap.put(url, resource);
+//                    mRecyclerView.postInvalidate();
+//                }
+//            });
         }
 
     }
