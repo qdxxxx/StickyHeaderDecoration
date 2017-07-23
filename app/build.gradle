@@ -26,7 +26,8 @@ dependencies {
     testCompile 'junit:junit:4.12'
 
     compile 'com.android.support:recyclerview-v7:25.3.1'
-    compile 'com.github.bumptech.glide:glide:3.6.1'
+    compile 'com.github.bumptech.glide:glide:4.0.0-RC1'
 
     compile 'com.android.support:support-v4:25.3.1'
+
 }
