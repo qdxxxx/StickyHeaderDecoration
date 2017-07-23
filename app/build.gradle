@@ -1,10 +1,9 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.3"
     defaultConfig {
-        applicationId "qdx.stickyheaderdecoration"
         minSdkVersion 16
         targetSdkVersion 25
         versionCode 1
