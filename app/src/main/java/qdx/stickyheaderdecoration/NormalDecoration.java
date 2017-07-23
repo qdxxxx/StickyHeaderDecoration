@@ -1,5 +1,7 @@
 package qdx.stickyheaderdecoration;
 
+import android.app.Activity;
+import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -34,8 +36,8 @@ public abstract class NormalDecoration extends RecyclerView.ItemDecoration {
     private final float txtYAxis;
     private RecyclerView mRecyclerView;
 
-
-    public NormalDecoration() {
+    private Context mContext;
+    public NormalDecoration(Context context) {
         mHeaderTxtPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mHeaderTxtPaint.setColor(textColor);
         mHeaderTxtPaint.setTextSize(textSize);
@@ -245,7 +247,7 @@ public abstract class NormalDecoration extends RecyclerView.ItemDecoration {
             imageView.setImageDrawable(getImg(url));
 
         } else {
-            Glide.with(mRecyclerView.getContext()).load(url).into(new SimpleTarget<Drawable>() {
+            Glide.with(mContext).load(url).into(new SimpleTarget<Drawable>() {
                 @Override
                 public void onResourceReady(Drawable resource, Transition<? super Drawable> transition) {
                     Log.i("qdx", "Glide回调" + pos);
