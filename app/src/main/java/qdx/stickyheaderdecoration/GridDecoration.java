@@ -1,5 +1,6 @@
 package qdx.stickyheaderdecoration;
 
+import android.content.Context;
 import android.graphics.Rect;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -14,7 +15,8 @@ import java.util.TreeSet;
 public abstract class GridDecoration extends NormalDecoration {
     private int itemTotalCount;
 
-    public GridDecoration(int itemTotalCount, int span) {
+    public GridDecoration(int itemTotalCount, int span, Context context) {
+        super(context);
         this.itemTotalCount = itemTotalCount;
         for (int pos = 0; pos < itemTotalCount; pos++) {
             /*我们为每个不同头部名称的第一个item设置头部高度*/
