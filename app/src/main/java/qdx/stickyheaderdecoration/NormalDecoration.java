@@ -14,8 +14,9 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.target.SimpleTarget;
-import com.bumptech.glide.request.transition.Transition;
+import com.bumptech.glide.load.resource.drawable.GlideDrawable;
+import com.bumptech.glide.request.animation.GlideAnimation;
+import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -243,17 +244,18 @@ public abstract class NormalDecoration extends RecyclerView.ItemDecoration {
             Log.i("qdx", "Glide 加载完图片" + pos);
 
             imageView.setImageDrawable(getImg(url));
-
         } else {
-//            Glide.with(mRecyclerView.getContext()).load(url).into(new SimpleTarget<Drawable>() {
-//                @Override
-//                public void onResourceReady(Drawable resource, Transition<? super Drawable> transition) {
-//                    Log.i("qdx", "Glide回调" + pos);
-//                    headViewMap.remove(pos);//删除，重新更新
-//                    imgDrawableMap.put(url, resource);
-//                    mRecyclerView.postInvalidate();
-//                }
-//            });
+            Glide.with(mRecyclerView.getContext()).load(url)
+                    .into(new GlideDrawableImageViewTarget(imageView) {
+                        @Override
+                        public void onResourceReady(GlideDrawable resource, GlideAnimation<? super GlideDrawable> animation) {
+                            super.onResourceReady(resource, animation);
+                            Log.i("qdx", "Glide回调" + pos);
+                            headViewMap.remove(pos);//删除，重新更新
+                            imgDrawableMap.put(url, resource);
+                            mRecyclerView.postInvalidate();
+                        }
+                    });
         }
 
     }
