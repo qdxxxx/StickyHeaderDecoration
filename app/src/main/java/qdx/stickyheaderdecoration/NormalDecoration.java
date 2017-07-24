@@ -121,7 +121,7 @@ public abstract class NormalDecoration extends RecyclerView.ItemDecoration {
                                 .measure(View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED),
                                         View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
                         headerView.setDrawingCacheEnabled(true);
-                        headerView.layout(0, 0, right, headerHeight);//布局layout
+                        headerView.layout(0, 0, right, headerView.getMeasuredHeight());//布局layout
                         headViewMap.put(pos, headerView);
                         canvas.drawBitmap(headerView.getDrawingCache(), left, viewTop - headerHeight, null);
 
@@ -154,7 +154,7 @@ public abstract class NormalDecoration extends RecyclerView.ItemDecoration {
                         View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED),
                         View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
                 headerView.setDrawingCacheEnabled(true);
-                headerView.layout(0, 0, right, headerHeight);//布局layout
+                headerView.layout(0, 0, right, headerView.getMeasuredHeight());//布局layout
                 headViewMap.put(firstPos, headerView);
                 canvas.drawBitmap(headerView.getDrawingCache(), left, 0, null);
             } else {
