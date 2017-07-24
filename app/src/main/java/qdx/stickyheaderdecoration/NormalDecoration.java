@@ -39,7 +39,8 @@ public abstract class NormalDecoration extends RecyclerView.ItemDecoration {
         mHeaderTxtPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mHeaderTxtPaint.setColor(textColor);
         mHeaderTxtPaint.setTextSize(textSize);
-        mHeaderTxtPaint.setTextAlign(Paint.Align.CENTER);
+        mHeaderTxtPaint.setTextAlign(Paint.Align.LEFT);
+
 
         mHeaderContentPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mHeaderContentPaint.setColor(headerContentColor);
