@@ -48,6 +48,7 @@ public abstract class NormalDecoration extends RecyclerView.ItemDecoration {
         float total = -fontMetrics.ascent + fontMetrics.descent;
         txtYAxis = total / 2 - fontMetrics.descent;
     }
+    private boolean isInitHeight = false;
 
     /**
      * 先调用getItemOffsets再调用onDraw
@@ -55,6 +56,17 @@ public abstract class NormalDecoration extends RecyclerView.ItemDecoration {
     @Override
     public void getItemOffsets(Rect outRect, View itemView, RecyclerView parent, RecyclerView.State state) {
         super.getItemOffsets(outRect, itemView, parent, state);
+
+        mRecyclerView = parent;
+        if (headerDrawEvent != null && !isInitHeight) {
+            View headerView = headerDrawEvent.getHeaderView(0);
+            headerView
+                    .measure(View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED),
+                            View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
+            headerHeight = headerView.getMeasuredHeight();
+            isInitHeight = true;
+        }
+
         /*我们为每个不同头部名称的第一个item设置头部高度*/
         int pos = parent.getChildAdapterPosition(itemView); //获取当前itemView的位置
         String curHeaderName = getHeaderName(pos);         //根据pos获取要悬浮的头部名
@@ -76,9 +88,6 @@ public abstract class NormalDecoration extends RecyclerView.ItemDecoration {
     @Override
     public void onDrawOver(Canvas canvas, RecyclerView recyclerView, RecyclerView.State state) {
         super.onDrawOver(canvas, recyclerView, state);
-        mRecyclerView = recyclerView;
-
-
         if (gestureDetector == null) {
             gestureDetector = new GestureDetector(recyclerView.getContext(), gestureListener);
             recyclerView.setOnTouchListener(new View.OnTouchListener() {
@@ -121,7 +130,7 @@ public abstract class NormalDecoration extends RecyclerView.ItemDecoration {
                                 .measure(View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED),
                                         View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
                         headerView.setDrawingCacheEnabled(true);
-                        headerView.layout(0, 0, right, headerView.getMeasuredHeight());//布局layout
+                        headerView.layout(0, 0, right, headerHeight);//布局layout
                         headViewMap.put(pos, headerView);
                         canvas.drawBitmap(headerView.getDrawingCache(), left, viewTop - headerHeight, null);
 
@@ -154,7 +163,7 @@ public abstract class NormalDecoration extends RecyclerView.ItemDecoration {
                         View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED),
                         View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
                 headerView.setDrawingCacheEnabled(true);
-                headerView.layout(0, 0, right, headerView.getMeasuredHeight());//布局layout
+                headerView.layout(0, 0, right, headerHeight);//布局layout
                 headViewMap.put(firstPos, headerView);
                 canvas.drawBitmap(headerView.getDrawingCache(), left, 0, null);
             } else {
