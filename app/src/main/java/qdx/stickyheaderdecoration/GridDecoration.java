@@ -48,6 +48,7 @@ public abstract class GridDecoration extends NormalDecoration {
 
     @Override
     public void getItemOffsets(Rect outRect, View itemView, RecyclerView parent, RecyclerView.State state) {
+        super.getItemOffsets(outRect, itemView, parent, state);
         if (lookup == null) {
             lookup = new GridLayoutManager.SpanSizeLookup() {//相当于weight
                 @Override
