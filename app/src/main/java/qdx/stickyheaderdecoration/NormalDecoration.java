@@ -56,8 +56,10 @@ public abstract class NormalDecoration extends RecyclerView.ItemDecoration {
     @Override
     public void getItemOffsets(Rect outRect, View itemView, RecyclerView parent, RecyclerView.State state) {
         super.getItemOffsets(outRect, itemView, parent, state);
+        if (mRecyclerView == null) {
+            mRecyclerView = parent;
+        }
 
-        mRecyclerView = parent;
         if (headerDrawEvent != null && !isInitHeight) {
             View headerView = headerDrawEvent.getHeaderView(0);
             headerView
@@ -88,6 +90,9 @@ public abstract class NormalDecoration extends RecyclerView.ItemDecoration {
     @Override
     public void onDrawOver(Canvas canvas, RecyclerView recyclerView, RecyclerView.State state) {
         super.onDrawOver(canvas, recyclerView, state);
+        if (mRecyclerView == null) {
+            mRecyclerView = recyclerView;
+        }
         if (gestureDetector == null) {
             gestureDetector = new GestureDetector(recyclerView.getContext(), gestureListener);
             recyclerView.setOnTouchListener(new View.OnTouchListener() {
