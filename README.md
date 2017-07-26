@@ -27,3 +27,37 @@ dependencies {
 
 
 <br/>
+#### Activity里面集成代码
+ - 分组头部
+```
+final NormalDecoration decoration = new NormalDecoration() {
+            @Override
+            public String getHeaderName(int pos) {
+                return //返回每个分组头部名称;
+            }
+        };
+```
+
+ - 自定义头部/悬浮头部layout
+ ```
+decoration.setOnDecorationHeadDraw(new NormalDecoration.OnDecorationHeadDraw() {
+            @Override
+            public View getHeaderView(int pos) {
+                return //返回自定义头部view;
+            }
+        });
+ ```
+ 
+  - 头部点击事件
+   ```
+        decoration.setOnHeaderClickListener(new NormalDecoration.OnHeaderClickListener() {
+            @Override
+            public void headerClick(int pos) {
+            }
+        });
+ ```
+
+   - GridLayoutManager请配合GridDecoration使用。
+ 
+ 
+	
