@@ -1,5 +1,6 @@
 # StickyHeaderDecoration
 A sticky header decoration, use for recyclerview
+<br/>
  ![image](https://github.com/qdxxxx/StickyHeaderDecoration/blob/master/appGif/GIF.gif)
 ### 集成方式
 
