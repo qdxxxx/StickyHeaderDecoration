@@ -27,6 +27,7 @@ dependencies {
 
 
 <br/>
+
 #### Activity里面集成代码
  - 分组头部
 ```
@@ -56,8 +57,9 @@ decoration.setOnDecorationHeadDraw(new NormalDecoration.OnDecorationHeadDraw() {
             }
         });
  ```
+ 
 
-   - GridLayoutManager请配合GridDecoration使用。
+#### GridLayoutManager请配合GridDecoration使用。
  
  
 	
