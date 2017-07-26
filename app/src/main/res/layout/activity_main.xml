@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="qdx.stickyheaderdemo.MainActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#eeeeeeee"
+        android:gravity="center_vertical"
+        android:onClick="btn_normal"
+        android:text="LinearLayoutManager" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="#50505050" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:onClick="btn_lly_normal"
+        android:text="decoration为普通的文字" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="#50505050" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:onClick="btn_lly_custom"
+        android:text="decoration为自定义layout" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="#50505050" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#eeeeeeee"
+        android:gravity="center_vertical"
+        android:text="GridLayoutManager" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="#50505050" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:onClick="btn_grid_normal"
+        android:text="decoration为普通的文字" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="#50505050" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:onClick="btn_grid_custom"
+        android:text="decoration为自定义layout" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#eeeeeeee" />
+</LinearLayout>
