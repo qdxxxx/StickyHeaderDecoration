@@ -39,7 +39,7 @@ final NormalDecoration decoration = new NormalDecoration() {
         };
 ```
 
- - 自定义头部/悬浮头部layout
+ - 自定义头部/悬浮头部layout【自定义头部加载图片请用 ```loadImage() ```方法】
  ```
 decoration.setOnDecorationHeadDraw(new NormalDecoration.OnDecorationHeadDraw() {
             @Override
@@ -62,8 +62,7 @@ decoration.setOnDecorationHeadDraw(new NormalDecoration.OnDecorationHeadDraw() {
 #### GridLayoutManager请配合GridDecoration使用。
  
  ### 方法及属性介绍
-
- - BezierRoundView
+---
 
 name                   | format         |中文解释
 ----                   |------      	|----
