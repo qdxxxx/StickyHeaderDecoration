@@ -1,5 +1,5 @@
 # StickyHeaderDecoration
-A sticky header decoration, use for recyclerview，when use GridLayoutManager auto set group span.
+A sticky header decoration, use for recyclerview，when use GridLayoutManager auto set group`s span.
 <br/>
  ![image](https://github.com/qdxxxx/StickyHeaderDecoration/blob/master/appGif/GIF.gif)
 ### 集成方式
@@ -31,7 +31,7 @@ Step 1. Add the JitPack repository to your build file
 #### Activity里面集成代码
  - 分组头部
 ```
-final NormalDecoration decoration = new NormalDecoration() {
+        NormalDecoration decoration = new NormalDecoration() {
             @Override
             public String getHeaderName(int pos) {
                 return //返回每个分组头部名称;
@@ -41,7 +41,7 @@ final NormalDecoration decoration = new NormalDecoration() {
 
  - 自定义头部/悬浮头部layout【自定义头部加载图片请用 ```loadImage() ```方法】
  ```
-decoration.setOnDecorationHeadDraw(new NormalDecoration.OnDecorationHeadDraw() {
+        decoration.setOnDecorationHeadDraw(new NormalDecoration.OnDecorationHeadDraw() {
             @Override
             public View getHeaderView(int pos) {
                 return //返回自定义头部view;
