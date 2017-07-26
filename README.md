@@ -1,5 +1,5 @@
 # StickyHeaderDecoration
-A sticky header decoration, use for recyclerview
+A sticky header decoration, use for recyclerview，when use GridLayoutManager auto set group span.
 <br/>
  ![image](https://github.com/qdxxxx/StickyHeaderDecoration/blob/master/appGif/GIF.gif)
 ### 集成方式
