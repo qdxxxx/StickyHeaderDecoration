@@ -16,9 +16,9 @@ Step 1. Add the JitPack repository to your build file
 	}
 ```
 ```
-dependencies {
-    compile 'com.github.qdxxxx:StickyHeaderDecoration:1.0.1'
-}
+	dependencies {
+ 	   compile 'com.github.qdxxxx:StickyHeaderDecoration:1.0.1'
+	}
 ```
 #### Version
 ---
