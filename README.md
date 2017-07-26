@@ -73,9 +73,11 @@ setTextColor           | integer 	|普通分组头部【只含文字】文�
 setHeaderContentColor  | integer  	|普通分组头部【只含文字】文字背景颜色
 onDestory	       |                |清空数据集合/监听等
 *loadImage              |String,integer,ImageView|用来加载并刷新图片到分组头部【自定义头部很重要的方法！】
----
+
 
 ####  License
+---
+
 ```
 MIT License
 
