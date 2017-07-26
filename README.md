@@ -61,5 +61,17 @@ decoration.setOnDecorationHeadDraw(new NormalDecoration.OnDecorationHeadDraw() {
 
 #### GridLayoutManager请配合GridDecoration使用。
  
- 
+ ### 方法及属性介绍
+
+ - BezierRoundView
+
+name                   | format         |中文解释
+----                   |------      	|----
+setHeaderHeight        | integer    	|分组头部高度
+setTextPaddingLeft     | integer   	|普通分组头部【只含文字】文字左边距
+setTextSize            | integer	|普通分组头部【只含文字】文字大小
+setTextColor           | integer 	|普通分组头部【只含文字】文字颜色
+setHeaderContentColor  | integer  	|普通分组头部【只含文字】文字背景颜色
+onDestory	       |                |清空数据集合/监听等
+---
 	
