@@ -2,7 +2,8 @@
 A sticky header decoration, use for recyclerview，when use GridLayoutManager auto set group`s span.
 <br/>
  ![image](https://github.com/qdxxxx/StickyHeaderDecoration/blob/master/appGif/GIF.gif)
- 天气热，本github已安装空调，star即可免费享用~~
+ 
+ 天气热，本github已安装空调，star即可免费享用...
  
 ### 集成方式
 
