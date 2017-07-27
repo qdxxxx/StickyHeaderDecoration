@@ -25,7 +25,7 @@ Step 1. Add the JitPack repository to your build file
 ```
 #### Version
 ---
- - v1.0.1  ： 配合RecyclerView使用的悬浮头部和标题头部，目前支持文字和自定义layout两种头部，LinearLayoutManager【垂直】及GridLayoutManager【垂直】可用，暂不支持StaggeredGridLayoutManager。
+ - v1.0.1  ： 配合RecyclerView使用的悬浮头部和标题头部，目前支持文字和自定义layout两种头部，LinearLayoutManager【竖直】及GridLayoutManager【竖直】可用，暂不支持StaggeredGridLayoutManager。
 
 
 
