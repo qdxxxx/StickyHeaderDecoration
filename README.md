@@ -78,6 +78,11 @@ onDestory	       |                |清空数据集合/监听等
 *loadImage              |String,integer,ImageView|用来加载并刷新图片到分组头部【自定义头部很重要的方法！】
 
 
+#### Article
+---
+博客详解文章
+[http://blog.csdn.net/qian520ao/article/details/76167193](http://blog.csdn.net/qian520ao/article/details/76167193)
+
 ####  License
 ---
 
