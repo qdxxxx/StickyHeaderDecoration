@@ -9,7 +9,7 @@ A sticky header decoration, use for recyclerview，when use GridLayoutManager au
  ### Download
  [https://fir.im/fzqr]( https://fir.im/fzqr)
 
- 
+ ---
 ### 集成方式
 
  - 注入依赖
